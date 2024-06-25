@@ -18,6 +18,8 @@ export default {
           "radial-gradient(130.44% 143.46% at 48.15% 107.07%, #2C1459 0%, #170A2F 15.15%, #0B0319 44.82%)",
       },
       colors: {
+        "footer-elements": "#96A0B5",
+        "accent-dark": "#140C24",
         "description-gray": "#B7C1D6",
         primary: "#8069D2",
         "outline-purple": "#1D1039",

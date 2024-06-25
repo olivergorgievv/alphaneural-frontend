@@ -35,9 +35,9 @@ export default function ModelsListed() {
               </svg>
             </button>
           </div>
-          <div className="col-span-5 border-2 px-4 flex flex-col py-10 gap-2 md:px-10 rounded-3xl border-primary/10 relative overflow-hidden bg-custom-radial">
+          <div className="col-span-5 border-2 px-10 flex flex-col py-10 gap-5 md:px-10 rounded-3xl border-primary/10 relative overflow-hidden bg-custom-radial">
             <div className="absolute inset-0 bg-gradient-to-t from-[#080214] to-transparent pointer-events-none"></div>
-            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[300px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
+            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[320px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
               <div className="flex gap-6 justify-between md:w-full">
                 <img src={cohere} alt="Cohere" />
                 <div className="flex flex-col gap-2 justify-between w-full">
@@ -57,7 +57,7 @@ export default function ModelsListed() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[300px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
+            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[320px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
               <div className="flex gap-6 justify-between md:w-full">
                 <img src={mistralai} alt="Cohere" />
                 <div className="flex flex-col gap-2 justify-between w-full">
@@ -77,7 +77,7 @@ export default function ModelsListed() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[300px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
+            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[320px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
               <div className="flex gap-6 justify-between md:w-full">
                 <img src={xai} alt="Cohere" />
                 <div className="flex flex-col gap-2 justify-between w-full">

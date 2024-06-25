@@ -1,25 +1,43 @@
 import { useState } from "react";
 import logo from "../../assets/react.svg";
 import { Dropdown } from "flowbite-react";
+import { useEffect } from "react";
 
 export default function NavBar() {
+  const useCheckMobileScreen = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const handleWindowSizeChange = () => {
+      setWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+      window.addEventListener("resize", handleWindowSizeChange);
+      return () => {
+        window.removeEventListener("resize", handleWindowSizeChange);
+      };
+    }, []);
+
+    return width <= 768;
+  };
+
+  const isMobile = useCheckMobileScreen();
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-gray-200 bg-[#080214]/50 backdrop-blur-lg">
+      <nav className="sticky top-0 z-50 bg-[#080214]/50 backdrop-blur-lg">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
           <a
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src={logo} className="h-12" alt="Flowbite Logo" />
+            <img src={logo} className="h-12" alt="AlphaNeural AI Logo" />
           </a>
           <button
             onClick={() => setOpen((prev) => !prev)}
             data-collapse-toggle="navbar-dropdown"
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
             aria-controls="navbar-dropdown"
           >
             <span className="sr-only">Open main menu</span>
@@ -37,13 +55,13 @@ export default function NavBar() {
           <div
             className={`w-full md:block md:w-auto ${open ? "block" : "hidden"}`}
           >
-            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
+            <ul className="mt-4 flex flex-col rounded-lg border border-primary/30 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
               <li>
                 <Dropdown
-                  className="bg-[#0C041B] text-white border-[#241B3C] rounded-lg"
+                  className="bg-[#0C041B] text-white border-[#241B3C] rounded-lg "
                   dismissOnClick={false}
                   renderTrigger={() => (
-                    <button className="flex w-full items-center justify-between rounded px-3 py-2 text-white active:text-primary md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary">
+                    <button className=" hover:bg-accent-dark flex w-full items-center justify-between rounded px-3 py-2 text-white active:text-primary md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary">
                       AlphaNeural Hub
                       <svg
                         className="ms-2.5 h-2.5 w-2.5"
@@ -66,8 +84,10 @@ export default function NavBar() {
 
                   <Dropdown
                     label="Dropdown right"
-                    placement="right"
-                    className="bg-[#0C041B] text-white border-[#241B3C] "
+                    placement={`${isMobile ? "down" : "right"}`}
+                    className={`bg-[#0C041B] text-white border-[#241B3C] ${
+                      isMobile ? "mt-12" : ""
+                    }`}
                     dismissOnClick={false}
                     renderTrigger={() => (
                       <button
@@ -105,7 +125,7 @@ export default function NavBar() {
               <li>
                 <a
                   href="#"
-                  className="block rounded px-3 py-2 text-white hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
+                  className="block rounded px-3 py-2 text-white hover:bg-accent-dark md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
                 >
                   Roadmap
                 </a>
@@ -113,7 +133,7 @@ export default function NavBar() {
               <li>
                 <a
                   href="#"
-                  className="block rounded px-3 py-2 text-white hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
+                  className="block rounded px-3 py-2 text-white hover:bg-accent-dark md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
                 >
                   Tokenomics
                 </a>
@@ -121,7 +141,7 @@ export default function NavBar() {
               <li>
                 <a
                   href="#"
-                  className="block rounded px-3 py-2 text-white hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
+                  className="block rounded px-3 py-2 text-white hover:bg-accent-dark md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
                 >
                   Docs
                 </a>

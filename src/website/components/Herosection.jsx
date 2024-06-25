@@ -37,9 +37,9 @@ export default function Herosection() {
           </span>
         </a>
         <div className="flex items-center justify-center">
-          <h1 className="mb-4 flex flex-wrap items-center justify-center gap-4 text-4xl font-extrabold text-white md:flex md:items-center md:text-5xl lg:text-6xl">
+          <h1 className="mb-4 flex flex-wrap items-center justify-center md:gap-4 text-4xl font-extrabold text-white md:flex md:items-center md:text-5xl lg:text-6xl">
             The Decentralized
-            <img src={Thunderbolt} className="block" />
+            <img src={Thunderbolt} className="block w-14 md:w-20" />
             AI Community
           </h1>
         </div>
