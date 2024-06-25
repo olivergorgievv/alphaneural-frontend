@@ -1,13 +1,14 @@
 import cohere from "../../assets/icons/cohere.svg";
 import mistralai from "../../assets/icons/mistralai.svg";
 import xai from "../../assets/icons/xai.svg";
+import downloadIcon from "../../assets/icons/download-icon.svg";
 
 export default function ModelsListed() {
   return (
     <>
       <section>
-        <div className="gap-8 flex flex-col items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-28 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-          <div className="mt-4 md:mt-0">
+        <div className="gap-8 flex flex-col items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-20 lg:grid lg:grid-cols-12 sm:py-16 lg:px-6">
+          <div className="col-span-7 mt-4 md:mt-0">
             <h2 className="mb-4 text-3xl tracking-tight font-bold ">
               Empowering Personalization with Zero-Knowledge Machine Learning
             </h2>
@@ -19,7 +20,7 @@ export default function ModelsListed() {
               personalized AI applications.
             </p>
             <button className="flex items-center justify-center gap-4 rounded-full bg-primary px-10 py-2">
-              Lets Build!
+              Let&apos;s Build!
               <svg
                 width="16"
                 height="21"
@@ -34,18 +35,64 @@ export default function ModelsListed() {
               </svg>
             </button>
           </div>
-          <div className="border-2 px-4 flex flex-col py-10 md:px-14 rounded-3xl border-primary/20 bg-custom-radial relative overflow-hidden">
-            <div className="flex flex-col gap-10 px-7 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-5 bg-[#190E2E]">
-              <div className="flex gap-10 justify-between">
-                <img src={cohere} />
-                <div className="flex flex-col gap-2 justify-between">
-                  <div className="flex gap-10 justify-between">
-                    <p>CohereForAI</p>
-                    <p>100 ALPHAI</p>
+          <div className="col-span-5 border-2 px-4 flex flex-col py-10 gap-2 md:px-10 rounded-3xl border-primary/10 relative overflow-hidden bg-custom-radial">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080214] to-transparent pointer-events-none"></div>
+            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[300px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
+              <div className="flex gap-6 justify-between md:w-full">
+                <img src={cohere} alt="Cohere" />
+                <div className="flex flex-col gap-2 justify-between w-full">
+                  <div className="flex justify-between w-full">
+                    <p className="text-base">CohereForAI</p>
+                    <p className="text-primary text-sm">100 ALPHAI</p>
                   </div>
-                  <div className="flex gap-10 justify-between">
-                    <p>text-to-image</p>
-                    <p>36.8k</p>
+                  <div className="flex justify-between w-full">
+                    <p className="text-description-gray text-base">
+                      text-to-image
+                    </p>
+                    <p className="text-description-gray text-base flex items-center gap-2">
+                      <img src={downloadIcon} />
+                      36.8k
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[300px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
+              <div className="flex gap-6 justify-between md:w-full">
+                <img src={mistralai} alt="Cohere" />
+                <div className="flex flex-col gap-2 justify-between w-full">
+                  <div className="flex justify-between w-full">
+                    <p className="text-base">mistralai</p>
+                    <p className="text-primary text-sm">100 ALPHAI</p>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <p className="text-description-gray text-base">
+                      text-to-image
+                    </p>
+                    <p className="text-description-gray text-base flex items-center gap-2">
+                      <img src={downloadIcon} />
+                      874k
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-10 px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-[300px] sm:w-[400px] mx-auto md:w-[400px] lg:w-full">
+              <div className="flex gap-6 justify-between md:w-full">
+                <img src={xai} alt="Cohere" />
+                <div className="flex flex-col gap-2 justify-between w-full">
+                  <div className="flex justify-between w-full">
+                    <p className="text-base">xai-org/grok-1</p>
+                    <p className="text-primary text-sm">100 ALPHAI</p>
+                  </div>
+                  <div className="flex justify-between w-full">
+                    <p className="text-description-gray text-base">
+                      text-to-image
+                    </p>
+                    <p className="text-description-gray text-base flex items-center gap-2">
+                      <img src={downloadIcon} />
+                      34k
+                    </p>
                   </div>
                 </div>
               </div>
