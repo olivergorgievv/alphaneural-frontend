@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color: white;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+}
+
+.body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
