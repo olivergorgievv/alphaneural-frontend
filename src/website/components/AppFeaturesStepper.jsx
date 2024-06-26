@@ -7,15 +7,6 @@ import d3 from "../../assets/images/Dashboard-feature-3.webp";
 import d4 from "../../assets/images/Dashboard-feature-4.webp";
 import d1 from "../../assets/images/Dashboard-feature.webp";
 
-function preloadImage(src) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = resolve;
-    img.onerror = reject;
-    img.src = src;
-  });
-}
-
 const features = [
   {
     title: "Analytics",
@@ -44,6 +35,19 @@ const features = [
 ];
 
 export function PrimaryFeatures() {
+  const [loadedImages, setLoadedImages] = useState({});
+
+  function preloadImage(src) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        setLoadedImages((prev) => ({ ...prev, [src]: true }));
+        resolve();
+      };
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
   useEffect(() => {
     features.forEach((feature) => {
       preloadImage(feature.image);
@@ -137,7 +141,19 @@ export function PrimaryFeatures() {
                   </p>
                 </div>
                 <div className="mt-10 w-[45rem] overflow-hidden rounded-xl shadow-2xl shadow-blue-900/40 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                  <img src={feature.image} alt={feature.title} />
+                  <div className="relative" style={{ paddingBottom: "56.25%" }}>
+                    {" "}
+                    {/* 16:9 aspect ratio */}
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
+                        loadedImages[feature.image]
+                          ? "opacity-100"
+                          : "opacity-0"
+                      }`}
+                    />
+                  </div>
                 </div>
               </Tab.Panel>
             ))}
