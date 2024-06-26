@@ -71,7 +71,7 @@ export default function Herosection() {
         </div>
 
         <div className="overflow-hidden py-8">
-          <div className="flex animate-left">
+          <div className="flex animate-mobile md:animate-left">
             <div className="mr-4 flex w-max gap-4 ">
               {clients.map((client, index) => (
                 <a

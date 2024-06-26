@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       animation: {
-        left: "bannermoveleft 20s linear infinite",
+        left: "bannermoveleft 10s linear infinite",
+        mobile: "bannermoveleft 2s linear infinite",
       },
       keyframes: {
         bannermoveleft: {
