@@ -17,7 +17,7 @@ function Home() {
       <ModelsListed />
       <EmailInput />
       <DashboardBlock />
-      <PrimaryFeatures />
+
       <Features />
       <LeftImageCTA />
       <RightImage />
