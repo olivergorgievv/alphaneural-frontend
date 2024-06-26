@@ -1,11 +1,20 @@
-import { useEffect, useState } from "react";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
+import { useEffect, useState } from "react";
 
-import d1 from "../../assets/images/Dashboard-feature.webp";
 import d2 from "../../assets/images/Dashboard-feature-2.webp";
 import d3 from "../../assets/images/Dashboard-feature-3.webp";
 import d4 from "../../assets/images/Dashboard-feature-4.webp";
+import d1 from "../../assets/images/Dashboard-feature.webp";
+
+function preloadImage(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = resolve;
+    img.onerror = reject;
+    img.src = src;
+  });
+}
 
 const features = [
   {
@@ -35,6 +44,12 @@ const features = [
 ];
 
 export function PrimaryFeatures() {
+  useEffect(() => {
+    features.forEach((feature) => {
+      preloadImage(feature.image);
+    });
+  }, []);
+
   const [tabOrientation, setTabOrientation] = useState("horizontal");
 
   useEffect(() => {
@@ -122,7 +137,7 @@ export function PrimaryFeatures() {
                   </p>
                 </div>
                 <div className="mt-10 w-[45rem] overflow-hidden rounded-xl shadow-2xl shadow-blue-900/40 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                  <img src={feature.image} />
+                  <img src={feature.image} alt={feature.title} />
                 </div>
               </Tab.Panel>
             ))}
