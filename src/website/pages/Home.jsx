@@ -4,6 +4,8 @@ import ModelsListed from "../components/ModelsListed";
 import EmailInput from "../components/EmailInput";
 import DashboardBlock from "../components/DashboardBlock";
 import Features from "../components/Features";
+import LeftImageCTA from "../components/LeftImageCTA";
+import RightImage from "../components/RightImage";
 
 function Home() {
   return (
@@ -14,6 +16,8 @@ function Home() {
       <EmailInput />
       <DashboardBlock />
       <Features />
+      <LeftImageCTA />
+      <RightImage />
     </>
   );
 }
