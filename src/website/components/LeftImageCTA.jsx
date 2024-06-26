@@ -84,30 +84,13 @@ export default function LeftImageCTA() {
   return (
     <>
       <section>
-        {/* <div className="border-2 flex flex-col  py-12 px-12 rounded-3xl border-primary/20 bg-custom-radial relative overflow-hidden">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold">
-              Introducing the SPL22 NFT
-            </h2>
-            <p className="mb-6 font-normal md:text-base text-description-gray">
-              Solana will soon enable SPL22 NFTs, which will act as a gateway to
-              a Collaborative AI Ecosystem on AlphaNeural. Join us, and shape
-              the future of AI together.
-            </p>
-            <a href="#" className="underline text-lg z-10">
-              Learn more about SPL22 NFTs
-            </a>
-            <img
-              src={spiderweb}
-              className="absolute right-[-60px] bottom-[-140px]"
-            />
-          </div> */}
         <div className="gap-8 py-2 px-4 mx-auto max-w-screen-xl xl:gap-20 sm:py-16 lg:px-6 md:grid md:grid-cols-2 md:items-center">
           <div className="border-2 flex flex-col py-8 px-12 rounded-3xl border-primary/20 bg-custom-radial relative overflow-hidden">
             <div className="flex flex-col">
-              <h2 className=" text-xl tracking-tight font-extrabold">
+              <h2 className=" text-xl md:text-3xl tracking-tight font-extrabold">
                 Introducing the SPL22 NFT
               </h2>
-              <p className="font-normal md:text-base text-description-gray">
+              <p className="font-base md:text-normal text-description-gray">
                 ALPHAI
               </p>
               <div className="" style={{ height: "200px", width: "100%" }}>

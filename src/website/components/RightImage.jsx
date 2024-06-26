@@ -1,4 +1,3 @@
-import spiderweb from "../../assets/spiderweb.svg";
 import cube from "../../assets/images/Cube.webp";
 
 export default function RightImage() {

@@ -6,8 +6,8 @@ import downloadIcon from "../../assets/icons/download-icon.svg";
 export default function ModelsListed() {
   return (
     <>
-      <section>
-        <div className="gap-8 flex flex-col items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-20 lg:grid lg:grid-cols-12 sm:py-16 lg:px-6">
+      <section className="py-8 px-4 sm:py-16 lg:px-6">
+        <div className="gap-8 flex flex-col items-center mx-auto max-w-screen-xl xl:gap-20 lg:grid lg:grid-cols-12">
           <div className="col-span-7 mt-4 md:mt-0">
             <h2 className="mb-4 text-3xl tracking-tight font-bold ">
               Empowering Personalization with Zero-Knowledge Machine Learning
@@ -35,76 +35,50 @@ export default function ModelsListed() {
               </svg>
             </button>
           </div>
-          <div className="col-span-5 border-2 px-4 flex flex-col py-10 gap-5 md:px-10 rounded-3xl border-primary/10 relative overflow-hidden bg-custom-radial">
+
+          <div className="col-span-5 border-2 px-4 flex flex-col py-10 gap-5 md:px-10 rounded-3xl border-primary/10 relative overflow-hidden bg-custom-radial w-full">
             <div className="absolute inset-0 bg-gradient-to-t from-[#080214] to-transparent pointer-events-none"></div>
-            <div className="flex flex-col gap-10 px-2 sm:px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] max-w-screen-2xl">
-              <div className="flex gap-3 sm:gap-6 justify-between md:w-full">
-                <img src={cohere} alt="Cohere" />
-                <div className="flex flex-col gap-2 justify-between w-full">
-                  <div className="flex justify-between items-center w-full">
-                    <p className="text-base font-medium sm:text-lg">Cohere</p>
-                    <p className="text-primary text-xs sm:text-sm">
-                      100 ALPHAI
-                    </p>
-                  </div>
-                  <div className="flex justify-between w-full gap-4">
-                    <p className="text-description-gray text-sm sm:text-base">
-                      text-to-image
-                    </p>
-                    <p className="text-description-gray text-sm sm:text-base flex items-center gap-2">
-                      <img src={downloadIcon} />
-                      36.8k
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-10 px-2 sm:px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] max-w-screen-2xl">
-              <div className="flex gap-3 sm:gap-6 justify-between md:w-full">
-                <img src={mistralai} alt="Cohere" />
-                <div className="flex flex-col gap-2 justify-between w-full">
-                  <div className="flex justify-between items-center w-full">
-                    <p className="text-base font-medium sm:text-lg">
-                      mistralai
-                    </p>
-                    <p className="text-primary text-xs sm:text-sm">
-                      100 ALPHAI
-                    </p>
-                  </div>
-                  <div className="flex justify-between w-full gap-4">
-                    <p className="text-description-gray text-sm sm:text-base">
-                      text-to-image
-                    </p>
-                    <p className="text-description-gray text-sm sm:text-base flex items-center gap-2">
-                      <img src={downloadIcon} />
-                      874k
-                    </p>
+
+            {[
+              { name: "Cohere", logo: cohere, downloads: "36.8k" },
+              { name: "mistralai", logo: mistralai, downloads: "874k" },
+              { name: "xai-org", logo: xai, downloads: "34k" },
+            ].map((model, index) => (
+              <div
+                key={index}
+                className="flex flex-col gap-4 px-3 sm:px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] w-full"
+              >
+                <div className="flex gap-3 sm:gap-6 justify-between w-full items-center">
+                  <img
+                    src={model.logo}
+                    alt={model.name}
+                    className="w-10 h-10 sm:w-12 sm:h-12"
+                  />
+                  <div className="flex flex-col gap-1 sm:gap-2 justify-between flex-grow">
+                    <div className="flex justify-between items-center w-full">
+                      <p className="text-sm font-medium sm:text-base md:text-lg">
+                        {model.name}
+                      </p>
+                      <p className="text-primary text-xs sm:text-sm">
+                        100 ALPHAI
+                      </p>
+                    </div>
+                    <div className="flex justify-between w-full gap-2 sm:gap-4">
+                      <p className="text-description-gray text-xs sm:text-sm">
+                        text-to-image
+                      </p>
+                      <p className="text-description-gray text-xs sm:text-sm flex items-center gap-1 sm:gap-2">
+                        <img
+                          src={downloadIcon}
+                          className="w-3 h-3 sm:w-4 sm:h-4"
+                        />
+                        {model.downloads}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col gap-10 px-2 sm:px-5 justify-between border-[1.5px] items-center border-primary/30 rounded-2xl py-4 bg-[#190E2E] max-w-screen-2xl">
-              <div className="flex gap-3 sm:gap-6 justify-between sm:w-full">
-                <img src={xai} alt="Cohere" />
-                <div className="flex flex-col gap-2 justify-between w-full">
-                  <div className="flex justify-between items-center w-full">
-                    <p className="text-base font-medium sm:text-lg">xai-org</p>
-                    <p className="text-primary text-xs sm:text-sm">
-                      100 ALPHAI
-                    </p>
-                  </div>
-                  <div className="flex justify-between w-full gap-4">
-                    <p className="text-description-gray text-sm sm:text-base">
-                      text-to-image
-                    </p>
-                    <p className="text-description-gray text-sm sm:text-base flex items-center gap-2">
-                      <img src={downloadIcon} />
-                      34k
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

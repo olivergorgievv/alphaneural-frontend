@@ -49,8 +49,8 @@ export default function Herosection() {
           global community to develop, share, and monetize AI technologies in a
           secure yet open ecosystem.
         </p>
-        <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
-          <button className="flex items-center justify-center gap-4 rounded-full bg-primary px-10 py-2">
+        <div className="mb-8 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
+          <button className="flex items-center justify-center gap-4 rounded-full bg-primary px-20 md:px-10 py-2">
             Lets Build!
             <svg
               width="16"
@@ -65,7 +65,7 @@ export default function Herosection() {
               />
             </svg>
           </button>
-          <button className="items-center justify-center gap-4 rounded-full border-2 border-primary/50 px-10 py-2 text-description-gray md:flex">
+          <button className="items-center justify-center gap-4 rounded-full border-2 border-primary/50 px-20 md:px-10 py-2 text-description-gray md:flex">
             Launch App
           </button>
         </div>
