@@ -141,7 +141,7 @@ export function PrimaryFeatures() {
                   </p>
                 </div>
                 <div className="mt-10 w-[45rem] overflow-hidden rounded-xl shadow-2xl shadow-blue-900/40 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                  <div className="relative" style={{ paddingBottom: "56.25%" }}>
+                  <div className="relative" style={{ paddingBottom: "68.25%" }}>
                     {" "}
                     {/* 16:9 aspect ratio */}
                     <img
