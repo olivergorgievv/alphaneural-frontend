@@ -27,7 +27,7 @@ export default function Features() {
             <h3 className="mb-2 text-xl font-bold text-[#AF95FE]">
               Privacy-Preserved Data Contribution
             </h3>
-            <p className="text-gray-500">
+            <p className="text-description-gray">
               Your data remains protected with advanced Zero-Knowledge Machine
               Learning technologies.
             </p>
@@ -39,7 +39,7 @@ export default function Features() {
             <h3 className="mb-2 text-xl font-bold text-[#B197FF]">
               Open Innovation
             </h3>
-            <p className="text-gray-500">
+            <p className="text-description-gray">
               Access a marketplace where fresh ideas meet real-world
               applications and community-driven enhancements.
             </p>
@@ -51,7 +51,7 @@ export default function Features() {
             <h3 className="mb-2 text-xl font-bold text-[#825BE5]">
               Scalable Technology
             </h3>
-            <p className="text-gray-500 ">
+            <p className="text-description-gray ">
               Utilize a robust, scalable infrastructure capable of supporting
               large-scale AI model training and deployment.
             </p>
@@ -63,7 +63,7 @@ export default function Features() {
             <h3 className="mb-2 text-xl font-bold text-[#468DC6]">
               Dynamic Pricing
             </h3>
-            <p className="text-gray-500">
+            <p className="text-description-gray">
               Utilizing Solana for dynamic pricing ensures that the cost of
               accessing and using AI models is fair, transparent, and
               market-responsive.
@@ -76,7 +76,7 @@ export default function Features() {
             <h3 className="mb-2 text-xl font-bold text-[#B197FF]">
               Decentralized Governance
             </h3>
-            <p className="text-gray-500 ">
+            <p className="text-description-gray ">
               Participate in a democratic ecosystem where every member has a
               voice in shaping the future of the platform.
             </p>
@@ -88,7 +88,7 @@ export default function Features() {
             <h3 className="mb-2 text-xl font-bold text-[#825BE5]">
               Token Utility & Incentives
             </h3>
-            <p className="text-gray-500 ">
+            <p className="text-description-gray ">
               Benefit from a token-based system that rewards contributions and
               ensures fair revenue distribution.
             </p>

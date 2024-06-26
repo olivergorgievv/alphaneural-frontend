@@ -83,7 +83,7 @@ export default function LeftImageCTA() {
 
   return (
     <>
-      <section>
+      <section className="pt-16">
         <div className="gap-8 py-2 px-4 mx-auto max-w-screen-xl xl:gap-20 sm:py-16 lg:px-6 md:grid md:grid-cols-2 md:items-center">
           <div className="border-2 flex flex-col py-8 px-12 rounded-3xl border-primary/20 bg-custom-radial relative overflow-hidden">
             <div className="flex flex-col">
