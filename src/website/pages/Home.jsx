@@ -7,7 +7,7 @@ import Features from "../components/Features";
 import LeftImageCTA from "../components/LeftImageCTA";
 import RightImage from "../components/RightImage";
 
-import { PrimaryFeatures } from "../components/DashboardSection";
+// import { PrimaryFeatures } from "../components/DashboardSection";
 
 function Home() {
   return (
