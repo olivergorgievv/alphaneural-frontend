@@ -4,7 +4,7 @@ export default function RightImage() {
   return (
     <>
       <section>
-        <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-20 md:grid md:grid-cols-2 lg:px-6">
+        <div className="gap-8 pt-10 sm:pt-0 items-center px-4 mx-auto max-w-screen-xl xl:gap-20 md:grid md:grid-cols-2 lg:px-6">
           <div className="mt-4 md:mt-0">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold ">
               Revolutionizing AI with Your Data
