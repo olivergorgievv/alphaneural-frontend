@@ -2,8 +2,6 @@
 <img width="1459" alt="Screenshot 2024-06-27 at 18 31 08" src="https://github.com/olivergorgievv/alphaneural-website/assets/111359274/86b729f5-97cd-4f7a-a316-ae66e0d3f6c1">
 <br><br><br>
 
-<img width="1458" alt="Screenshot 2024-06-27 at 18 31 38" src="https://github.com/olivergorgievv/alphaneural-website/assets/111359274/951c7e95-0e93-4536-8035-6ab17b507b56">
-
 # React + Vite
 
 
