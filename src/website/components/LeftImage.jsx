@@ -22,7 +22,7 @@ export default function LeftImage() {
               className="absolute right-[-60px] bottom-[-140px]"
             />
           </div>
-          <div className="mt-4 md:mt-0">
+          <div className="mt-16 md:mt-0">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold ">
               Elevating AI Accessibility and Innovation
             </h2>
