@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import spiderweb from "../../assets/spiderweb.svg";
 
-export default function LeftImage() {
+export default function LeftImage({ roadmap }) {
   return (
     <>
       <section>
@@ -37,6 +38,22 @@ export default function LeftImage() {
               community are engineered to help your projects forward while
               incentivizing everyone with our token economy.
             </p>
+            {roadmap && (
+              <div className="sm:flex-wrap gap-4 flex justify-between items-center">
+                <div className="flex flex-col items-center border px-4 py-4 sm:px-8 sm:py-3 rounded-2xl bg-custom-radial border-primary/20">
+                  <h3 className="text-sm sm:text-3xl font-bold">300M+</h3>
+                  <p className="text-[8px] sm:text-xs">NFTS MINTED</p>
+                </div>
+                <div className="flex flex-col items-center border px-4 py-4 sm:px-8 sm:py-3 rounded-2xl bg-custom-radial border-primary/20">
+                  <h3 className="text-sm sm:text-3xl font-bold">300M+</h3>
+                  <p className="text-[8px] sm:text-xs">NFTS MINTED</p>
+                </div>
+                <div className="flex flex-col items-center border px-4 py-4 sm:px-8 sm:py-3 rounded-2xl bg-custom-radial border-primary/20">
+                  <h3 className="text-sm sm:text-3xl font-bold">300M+</h3>
+                  <p className="text-[8px] sm:text-xs">NFTS MINTED</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

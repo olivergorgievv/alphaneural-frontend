@@ -109,7 +109,7 @@ export function PrimaryFeatures() {
                   <>
                     <h3
                       className={clsx(
-                        "font-display text-left text-lg",
+                        "font-display text-left text-lg md:text-2xl md:font-extrabold",
                         selected
                           ? "text-primary lg:text-white"
                           : "hover:text-white lg:text-white"
@@ -119,7 +119,7 @@ export function PrimaryFeatures() {
                     </h3>
                     <p
                       className={clsx(
-                        "mt-2 hidden text-left text-sm lg:block max-w-md",
+                        "mt-2 hidden text-left text-[15px] lg:block max-w-md text-description-gray",
                         selected
                           ? "text-white"
                           : "text-blue-100 group-hover:text-white"
