@@ -1,26 +1,10 @@
-import { useState } from "react";
-import logo from "../../assets/react.svg";
 import { Dropdown } from "flowbite-react";
-import { useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/react.svg";
+import { useCheckMobileScreen } from "../utils/isMobile";
 
 export default function NavBar() {
-  const useCheckMobileScreen = () => {
-    const [width, setWidth] = useState(window.innerWidth);
-    const handleWindowSizeChange = () => {
-      setWidth(window.innerWidth);
-    };
-
-    useEffect(() => {
-      window.addEventListener("resize", handleWindowSizeChange);
-      return () => {
-        window.removeEventListener("resize", handleWindowSizeChange);
-      };
-    }, []);
-
-    return width <= 768;
-  };
-
   const isMobile = useCheckMobileScreen();
   const [open, setOpen] = useState(false);
 
