@@ -10,7 +10,7 @@
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/olivergorgievv/ZoroDesign
+   git clone https://github.com/olivergorgievv/alphaneural-website
    
 2. **Install dependencies:**
    ```sh
