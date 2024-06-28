@@ -71,27 +71,13 @@ export default function Herosection() {
         </div>
 
         <div className="overflow-hidden py-8">
-          <div className="flex animate-mobile md:animate-left">
-            <div className="mr-4 flex w-max gap-4 ">
-              {clients.map((client, index) => (
+          <div className="flex">
+            <div className="flex animate-marquee items-center">
+              {clients.concat(clients).map((client, index) => (
                 <a
                   key={index}
                   href="#"
-                  className="flex w-[13rem] items-center justify-center rounded-xl p-6 shadow-md hover:brightness-150 transition-all"
-                >
-                  <img
-                    src={client.logo}
-                    className="h-full w-full object-contain"
-                  />
-                </a>
-              ))}
-            </div>
-            <div className="flex w-max gap-4">
-              {clients.map((client, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="flex w-[13rem] items-center justify-center rounded-xl p-6 shadow-md"
+                  className="mx-4 flex w-[13rem] items-center justify-center rounded-xl p-6 shadow-md hover:brightness-150 transition-all"
                 >
                   <img
                     src={client.logo}

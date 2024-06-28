@@ -5,13 +5,12 @@ export default {
   theme: {
     extend: {
       animation: {
-        left: "bannermoveleft 10s linear infinite",
-        mobile: "bannermoveleft 2s linear infinite",
+        marquee: "marquee 50s linear infinite",
       },
       keyframes: {
-        bannermoveleft: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       backgroundImage: {
