@@ -69,7 +69,10 @@ export default function Footer() {
             </h2>
             <ul className="text-footer-elements">
               <li className="mb-4">
-                <a href="#" className=" hover:underline">
+                <a
+                  href="https://whitepaper.alphaneural.io/"
+                  className=" hover:underline"
+                >
                   Docs
                 </a>
               </li>

@@ -135,7 +135,7 @@ export default function NavBar() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://whitepaper.alphaneural.io/"
                   className="block rounded px-3 py-2 text-white hover:bg-accent-dark md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
                 >
                   Docs
