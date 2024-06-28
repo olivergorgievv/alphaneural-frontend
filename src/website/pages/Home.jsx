@@ -4,7 +4,7 @@ import ModelsListed from "../components/ModelsListed";
 import EmailInput from "../components/EmailInput";
 import DashboardBlock from "../components/DashboardBlock";
 import Features from "../components/Features";
-import LeftImageCTA from "../components/LeftImageCTA";
+import LeftImageCTA from "../components/ChartBlock";
 import RightImage from "../components/RightImage";
 
 import { PrimaryFeatures } from "../components/AppFeaturesStepper";

@@ -1,12 +1,18 @@
 import { Dropdown } from "flowbite-react";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/react.svg";
 import { useCheckMobileScreen } from "../utils/isMobile";
 
 export default function NavBar() {
+  const location = useLocation();
+
   const isMobile = useCheckMobileScreen();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]); // Scroll to top when pathname changes
 
   return (
     <>
