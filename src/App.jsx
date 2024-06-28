@@ -1,8 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootPage from "./website/pages/RootPage";
+import "./index.css";
 import Home from "./website/pages/Home";
 import Roadmap from "./website/pages/Roadmap";
-import "./index.css";
+import RootPage from "./website/pages/RootPage";
+import Tokenomics from "./website/pages/Tokenomics";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "roadmap", element: <Roadmap /> },
+      { path: "tokenomics", element: <Tokenomics /> },
       // {
       //   path: "products",
       //   element: <ProductsPage />,

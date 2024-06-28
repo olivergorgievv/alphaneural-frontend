@@ -1,16 +1,18 @@
-export default function EmailInput() {
+/* eslint-disable react/prop-types */
+export default function EmailInput({ roadmap }) {
   return (
     <section>
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 ">
         <div className="mx-auto max-w-screen-md text-center">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold ">
-            Be Part of the Future
+            {roadmap
+              ? "Long-Term Vision and Innovation"
+              : "Be Part of the Future"}
           </h2>
           <p className="mb-6 font-normal md:text-base text-description-gray">
-            Join the AlphaNeural AI revolution, where innovative AI solutions
-            are made accessible through blockchain technology. With ALPHAI
-            tokens, you&apos;re not just investing in a token; you&apos;re
-            becoming part of a movement towards a smarter, more connected world.
+            {roadmap
+              ? "AlphaNeural AI is committed to maintaining its role as a leader in the decentralized AI market through ongoing innovation and strategic growth. Our focus will be on enhancing the platform's technological capabilities and expanding its use cases to meet the diverse needs of a global audience. We will continue to invest in research and development, adapting to new technologies and market trends while fostering strong community engagement and forming strategic collaborations. This approach will ensure that AlphaNeural AI remains at the forefront of AI and blockchain integration, delivering robust, privacy-centric solutions across various industries."
+              : "Join the AlphaNeural AI revolution, where innovative AI solutions are made accessible through blockchain technology. With ALPHAI tokens, you&apos;re not just investing in a token; you&apos;re becoming part of a movement towards a smarter, more connected world."}
           </p>
           {/* <form action="#" className="mx-auto max-w-screen-sm">
             <div className="flex items-center mb-3">
@@ -52,6 +54,7 @@ export default function EmailInput() {
               </div>
             </div>
           </form> */}
+
           <form>
             <div className="flex">
               <div className="relative w-full max-w-lg mx-auto">

@@ -54,7 +54,7 @@ export default function RoadmapSections() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-48 max-w-screen-xl relative">
+    <div className="container mx-auto px-4 pt-32 pb-18 max-w-screen-xl relative">
       {!isMobile && (
         <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
           <img src={roadmapImage} className="h-full object-contain" />

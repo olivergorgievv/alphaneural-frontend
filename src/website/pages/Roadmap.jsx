@@ -1,6 +1,7 @@
-import StepperHero from "../components/StepperHero";
+import EmailInput from "../components/EmailInput";
 import LeftImage from "../components/LeftImage";
 import RoadmapSections from "../components/RoadmapSections";
+import StepperHero from "../components/StepperHero";
 
 function Roadmap() {
   return (
@@ -8,6 +9,7 @@ function Roadmap() {
       <StepperHero />
       <LeftImage roadmap={true} />
       <RoadmapSections />
+      <EmailInput roadmap={true} />
     </>
   );
 }
