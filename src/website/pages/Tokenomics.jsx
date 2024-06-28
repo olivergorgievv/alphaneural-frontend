@@ -1,11 +1,13 @@
 import CenteredHero from "../components/CenteredHero";
-import LeftImageStepper from "../components/LeftImageStepper";
+import ImageStepper from "../components/ImageStepper";
+import PieChart from "../components/PieChart";
 
 export default function Tokenomics() {
   return (
     <>
       <CenteredHero />
-      <LeftImageStepper />
+      <ImageStepper />
+      <PieChart />
     </>
   );
 }

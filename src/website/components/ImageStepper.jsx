@@ -6,7 +6,7 @@ import Sphere from "../../assets/images/SphereTokens.webp";
 import circle from "../../assets/icons/circle-roadmap.svg";
 import cube from "../../assets/icons/cube-roadmap.svg";
 
-export default function LeftImageStepper() {
+export default function ImageStepper() {
   return (
     <>
       <section>
