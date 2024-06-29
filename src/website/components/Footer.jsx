@@ -1,4 +1,5 @@
 import logo from "../../assets/react.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -87,14 +88,14 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <Link to={"/tokenomics"} className="hover:underline">
                   Tokenomics
-                </a>
+                </Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <Link to={"/roadmap"} className="hover:underline">
                   Roadmap
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
