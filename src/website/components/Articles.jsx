@@ -1,6 +1,10 @@
+import { Link, useLocation } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 
 const BlogSection = () => {
+  const location = useLocation();
+
   return (
     <section>
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-10 lg:px-6 ">
@@ -12,9 +16,13 @@ const BlogSection = () => {
             <p className="font-normal text-description-gray sm:text-xl">
               Explore us and be up to date!
             </p>
-            <button className="items-center justify-center px-8 py-1 gap-4 rounded-full border-2 border-primary/50 md:px-10 md:py-2 text-description-gray md:flex">
-              See all
-            </button>
+            {location.pathname === "/" && (
+              <Link to={"blog"}>
+                <button className="items-center justify-center px-8 py-1 gap-4 rounded-full border-2 border-primary/50 md:px-10 md:py-2 text-description-gray md:flex">
+                  See all
+                </button>
+              </Link>
+            )}
           </div>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

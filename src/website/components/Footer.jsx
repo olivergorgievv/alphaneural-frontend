@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:-10">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
           <div className="col-span-2">
-            <img src={logo} className="h-12" alt="Flowbite Logo" />
+            <img src={logo} className="h-12" alt="AlphaneuralAI Logo" />
             <p className="my-4 text-sm text-footer-elements">
               Explore AI innovation, where your data crafts customized models in
               our decentralized ecosystem. Embrace a future where privacy,
@@ -83,9 +83,9 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <Link to={"/blog"} className="hover:underline">
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="mb-4">
                 <Link to={"/tokenomics"} className="hover:underline">
