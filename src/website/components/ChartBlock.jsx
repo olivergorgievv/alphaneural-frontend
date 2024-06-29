@@ -38,12 +38,12 @@ const ChartWrapper = ({ data, options, onClick }) => {
 export default function LeftImageCTA() {
   const [chartKey, setChartKey] = useState(Date.now());
   const chartData = {
-    labels: ["Jun", "Jul", "Aug", "Aug", "Aug", "Aug"],
+    labels: ["324", "521", "460", "360", "650", "410"],
     datasets: [
       {
         id: 1,
         data: [2, 7, 6, 3, 8, 5, 10],
-        backgroundColor: ["rgb(128, 105, 210)"],
+        backgroundColor: ["rgb(128, 105, 210)", "rgb(175, 52, 136)"],
       },
     ],
   };
@@ -85,7 +85,7 @@ export default function LeftImageCTA() {
     <>
       <section className="pt-16">
         <div className="gap-8 py-2 px-4 mx-auto max-w-screen-xl xl:gap-20 sm:py-16 lg:px-6 md:grid md:grid-cols-2 md:items-center">
-          <div className="border-2 flex flex-col py-8 px-12 rounded-3xl border-primary/20 bg-custom-radial relative overflow-hidden">
+          <div className="border-2 flex flex-col py-8 px-8 rounded-3xl border-primary/20 bg-custom-radial relative overflow-hidden">
             <div className="flex flex-col">
               <h2 className=" text-xl md:text-3xl tracking-tight font-extrabold">
                 Introducing the SPL22 NFT
