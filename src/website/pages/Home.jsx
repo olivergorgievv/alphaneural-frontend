@@ -6,6 +6,7 @@ import DashboardBlock from "../components/DashboardBlock";
 import Features from "../components/Features";
 import LeftImageCTA from "../components/ChartBlock";
 import ImageTextBlock from "../components/ImageTextBlock";
+import BlogSection from "../components/Articles";
 
 // Images
 
@@ -30,6 +31,7 @@ function Home() {
         title="Revolutionizing AI with Your Data"
         description="Whether you need specific datasets to train your AI model or you have datasets to contribute. AlphaNeural AI allows you to monetize your data in a reliable and legitimate way. Both synthetic and non-synthetic data are useful for AI model training on AlphaNeural AI. Data contributors receive an NFT after their data is hashed on the blockchain."
       />
+      <BlogSection />
     </>
   );
 }
