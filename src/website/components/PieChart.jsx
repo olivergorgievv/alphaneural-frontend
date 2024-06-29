@@ -50,7 +50,7 @@ export default function PieChart() {
           "#6852B0",
         ],
         borderColor: ["#22173E"],
-        borderWidth: 2,
+        borderWidth: 4,
       },
     ],
   };
