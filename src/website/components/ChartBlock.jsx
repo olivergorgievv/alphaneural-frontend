@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-const ChartWrapper = ({ data, options, onClick }) => {
+const ChartWrapper = ({ data, options, onClick, width, height }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -32,10 +32,39 @@ const ChartWrapper = ({ data, options, onClick }) => {
     };
   }, []);
 
-  return <Bar ref={chartRef} data={data} options={options} onClick={onClick} />;
-};
+  if (width === 0 || height === 0) return null;
 
+  return (
+    <Bar
+      ref={chartRef}
+      data={data}
+      options={{ ...options, width, height }}
+      onClick={onClick}
+    />
+  );
+};
 export default function LeftImageCTA() {
+  const chartContainerRef = useRef(null);
+  const [chartDimensions, setChartDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
+  const [isClientSide, setIsClientSide] = useState(false);
+
+  useEffect(() => {
+    if (chartContainerRef.current) {
+      setChartDimensions({
+        width: chartContainerRef.current.offsetWidth,
+        height: chartContainerRef.current.offsetHeight,
+      });
+    }
+  }, [isClientSide]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsClientSide(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   const [chartKey, setChartKey] = useState(Date.now());
   const chartData = {
     labels: ["324", "521", "460", "360", "650", "410"],
@@ -93,12 +122,19 @@ export default function LeftImageCTA() {
               <p className="font-base md:text-normal text-description-gray">
                 ALPHAI
               </p>
-              <div className="" style={{ height: "200px", width: "100%" }}>
-                <ChartWrapper
-                  key={chartKey}
-                  data={chartData}
-                  options={chartOptions}
-                />
+              <div
+                ref={chartContainerRef}
+                style={{ height: "200px", width: "100%" }}
+              >
+                {isClientSide && chartDimensions.width > 0 && (
+                  <ChartWrapper
+                    key={chartKey}
+                    data={chartData}
+                    options={chartOptions}
+                    width={chartDimensions.width}
+                    height={chartDimensions.height}
+                  />
+                )}
               </div>
             </div>
           </div>
