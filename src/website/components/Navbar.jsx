@@ -1,6 +1,6 @@
 import { Dropdown } from "flowbite-react";
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/react.svg";
 import { useCheckMobileScreen } from "../utils/isMobile";
 
@@ -12,7 +12,7 @@ export default function NavBar() {
 
   useEffect(() => {
     setOpen(false);
-  }, [location.pathname]); // Scroll to top when pathname changes
+  }, [location.pathname]);
 
   return (
     <>
@@ -68,9 +68,11 @@ export default function NavBar() {
                     </button>
                   )}
                 >
-                  <Dropdown.Item className="hover:bg-[#181229]">
-                    Decentralized AI Marketplace
-                  </Dropdown.Item>
+                  <Link to={"hub-decentralized"}>
+                    <Dropdown.Item className="hover:bg-[#181229]">
+                      Decentralized AI Marketplace
+                    </Dropdown.Item>
+                  </Link>
                   <Dropdown.Item className="hover:bg-[#181229]">
                     Crowdsourced AI Training
                   </Dropdown.Item>

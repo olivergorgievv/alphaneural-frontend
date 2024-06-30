@@ -5,6 +5,7 @@ import Roadmap from "./website/pages/Roadmap";
 import RootPage from "./website/pages/RootPage";
 import Tokenomics from "./website/pages/Tokenomics";
 import BlogSection from "./website/components/Articles";
+import HubDecentralized from "./website/pages/HubDecentralized";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "roadmap", element: <Roadmap /> },
       { path: "tokenomics", element: <Tokenomics /> },
       { path: "blog", element: <BlogSection /> },
+      { path: "hub-decentralized", element: <HubDecentralized /> },
       // {
       //   path: "products",
       //   element: <ProductsPage />,
