@@ -24,6 +24,12 @@ export default function TextHeavy({ sections }) {
                   <h1 className="text-2xl lg:text-4xl font-bold mb-6">
                     {section.title}
                   </h1>
+                  {section.title2 && (
+                    <h1 className="text-2xl lg:text-4xl font-bold mb-6">
+                      {section.title2}
+                    </h1>
+                  )}
+
                   {splitParagraph(section.paragraph).map(
                     (chunk, chunkIndex) => (
                       <p

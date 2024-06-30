@@ -30,7 +30,7 @@ export default function NavBar() {
             onClick={() => setOpen((prev) => !prev)}
             data-collapse-toggle="navbar-dropdown"
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none  md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 focus:outline-none nav:hidden"
             aria-controls="navbar-dropdown"
           >
             <span className="sr-only">Open main menu</span>
@@ -46,15 +46,17 @@ export default function NavBar() {
           </button>
 
           <div
-            className={`w-full md:block md:w-auto ${open ? "block" : "hidden"}`}
+            className={`w-full nav:block nav:w-auto ${
+              open ? "block" : "hidden"
+            }`}
           >
-            <ul className="mt-4 flex flex-col rounded-lg border border-primary/30 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
+            <ul className="mt-4 flex flex-col rounded-lg border border-primary/30 p-4 font-medium nav:mt-0 nav:flex-row nav:space-x-8 nav:border-0 nav:p-0 rtl:space-x-reverse">
               <li>
                 <Dropdown
                   className="bg-[#0C041B] text-white border-[#241B3C] rounded-lg "
                   dismissOnClick={false}
                   renderTrigger={() => (
-                    <button className=" hover:bg-accent-dark flex w-full items-center justify-between rounded px-3 py-2 text-white active:text-primary md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary">
+                    <button className=" hover:bg-accent-dark flex w-full items-center justify-between rounded px-3 py-2 text-white active:text-primary nav:w-auto nav:border-0 nav:p-0 nav:hover:bg-transparent nav:hover:text-primary">
                       AlphaNeural Hub
                       <svg
                         className="ms-2.5 h-2.5 w-2.5"
@@ -73,10 +75,11 @@ export default function NavBar() {
                       Decentralized AI Marketplace
                     </Dropdown.Item>
                   </Link>
-                  <Dropdown.Item className="hover:bg-[#181229]">
-                    Crowdsourced AI Training
-                  </Dropdown.Item>
-
+                  <Link to={"hub-crowdsourced"}>
+                    <Dropdown.Item className="hover:bg-[#181229]">
+                      Crowdsourced AI Training
+                    </Dropdown.Item>
+                  </Link>
                   <Dropdown
                     label="Dropdown right"
                     placement={`${isMobile ? "down" : "right"}`}
@@ -87,7 +90,7 @@ export default function NavBar() {
                     renderTrigger={() => (
                       <button
                         className="flex items-center gap-[90px] justify-between 
-                         text-white active:text-primary md:border-0 md:hover:text-primary hover:bg-[#181229]"
+                         text-white active:text-primary nav:border-0 nav:hover:text-primary hover:bg-[#181229]"
                       >
                         <span className="px-4 py-2 text-sm ">Case studies</span>
                         <svg
@@ -108,19 +111,23 @@ export default function NavBar() {
                       </button>
                     )}
                   >
-                    <Dropdown.Item className="hover:bg-[#181229] text-xs">
-                      Decentralized AI Marketplaces
-                    </Dropdown.Item>
-                    <Dropdown.Item className=" hover:bg-[#181229] text-xs">
-                      Crowdsourced AI Training
-                    </Dropdown.Item>
+                    <Link to={"studies-financial"}>
+                      <Dropdown.Item className="hover:bg-[#181229] text-xs">
+                        Decentralized AI Marketplaces
+                      </Dropdown.Item>
+                    </Link>
+                    <Link to={"studies-healthcare"}>
+                      <Dropdown.Item className=" hover:bg-[#181229] text-xs">
+                        Crowdsourced AI Training
+                      </Dropdown.Item>
+                    </Link>
                   </Dropdown>
                 </Dropdown>
               </li>
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    `block rounded px-3 py-2 hover:bg-accent-dark md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary ${
+                    `block rounded px-3 py-2 hover:bg-accent-dark nav:border-0 nav:p-0 nav:hover:bg-transparent nav:hover:text-primary ${
                       isActive ? "text-primary" : "text-white"
                     }`
                   }
@@ -132,7 +139,7 @@ export default function NavBar() {
               <li>
                 <NavLink
                   className={({ isActive }) =>
-                    `block rounded px-3 py-2 hover:bg-accent-dark md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary ${
+                    `block rounded px-3 py-2 hover:bg-accent-dark nav:border-0 nav:p-0 nav:hover:bg-transparent nav:hover:text-primary ${
                       isActive ? "text-primary" : "text-white"
                     }`
                   }
@@ -144,14 +151,14 @@ export default function NavBar() {
               <li>
                 <a
                   href="https://whitepaper.alphaneural.io/"
-                  className="block rounded px-3 py-2 text-white hover:bg-accent-dark md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-primary"
+                  className="block rounded px-3 py-2 text-white hover:bg-accent-dark nav:border-0 nav:p-0 nav:hover:bg-transparent nav:hover:text-primary"
                 >
                   Docs
                 </a>
               </li>
             </ul>
           </div>
-          <button className="hidden items-center justify-center gap-4 rounded-full border-2 border-primary/50 px-10 py-2 text-description-gray md:flex">
+          <button className="hidden items-center justify-center gap-4 rounded-full border-2 border-primary/50 px-10 py-2 text-description-gray nav:flex">
             Launch App
           </button>
         </div>

@@ -101,7 +101,7 @@ export function PrimaryFeatures() {
                     "group relative rounded-2xl px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6 outline-none", // Added outline-none
                     selected
                       ? "bg-[#2c2041] lg:bg-[#1A1327]  border-none" // Added border-none
-                      : "hover:bg-[#181123]"
+                      : "hover:bg-[#0f0819]"
                   )
                 }
               >

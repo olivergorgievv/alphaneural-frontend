@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        nav: "900px",
+      },
       animation: {
         marquee: "marquee 50s linear infinite",
       },

@@ -1,6 +1,8 @@
-import HubHero from "../components/HubHero";
-import TextHeavy from "../components/TextHeavy";
-import EmailInput from "../components/EmailInput";
+import HubHero from "../../components/HubHero";
+import TextHeavy from "../../components/TextHeavy";
+import EmailInput from "../../components/EmailInput";
+
+import ring from "../../../assets/images/hub-ring.webp";
 
 function HubDecentralized() {
   const textHeavySections = [
@@ -17,12 +19,15 @@ function HubDecentralized() {
       This is particularly crucial in an era where data privacy concerns are paramount. zkML technology enables us to build a platform where trust is built into the system, encouraging wider participation and fostering a rich, diverse dataset essential for the nuanced development of AI models.`,
       space: "mb-0",
     },
-    // Add more sections as needed
   ];
 
   return (
     <>
-      <HubHero />
+      <HubHero
+        text="Crowdsourced AI Training"
+        image={ring}
+        paragraph="Empowering the Future with Decentralized Intelligence"
+      />
       <TextHeavy sections={textHeavySections} />
       <EmailInput alignment="left" />
     </>
