@@ -101,7 +101,7 @@ const Article = ({
       </div>
       <div className="flex flex-col flex-grow">
         <h2 className="my-2 text-[19px] font-bold tracking-tight">
-          <a href={``}>{title}</a>
+          <Link to={`/blog/${id}`}>{title}</Link>
         </h2>
         <p className="mb-4 text-[15px] font-normal text-description-gray">
           {description}
