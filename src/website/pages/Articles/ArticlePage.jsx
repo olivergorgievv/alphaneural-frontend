@@ -9,8 +9,6 @@ const ArticlePage = () => {
   const [article, setArticle] = useState(null);
   const { id } = useParams();
 
-  console.log(article);
-
   useEffect(() => {
     const fetchArticle = async () => {
       const { data, error } = await supabase

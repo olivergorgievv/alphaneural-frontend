@@ -6,7 +6,6 @@ import phantom from "../../../assets/partners/phantom.svg";
 import coinbase from "../../../assets/partners/coinbase-wallet.svg";
 import googleStartups from "../../../assets/partners/google-startups.svg";
 
-console.log(nosana);
 export const clients = [
   {
     name: "google",

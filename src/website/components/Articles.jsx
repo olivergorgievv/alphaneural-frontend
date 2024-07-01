@@ -7,16 +7,21 @@ import supabase from "../../_lib/supabase";
 const BlogSection = () => {
   const [articles, setArticles] = useState([]);
   const location = useLocation();
-  console.log(articles);
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const { data, error } = await supabase
+      let query = supabase
         .from("articles")
         .select("*")
-        .order("date", { ascending: false })
-        .limit(3);
+        .order("date", { ascending: false });
 
+      if (location.pathname === "/") {
+        query = query.limit(3);
+      } else {
+        query.limit(999);
+      }
+
+      const { data, error } = await query;
       if (error) {
         console.error("Error fetching articles:", error);
       } else {
@@ -25,7 +30,7 @@ const BlogSection = () => {
     };
 
     fetchArticles();
-  }, []);
+  }, [location]);
 
   return (
     <section>
