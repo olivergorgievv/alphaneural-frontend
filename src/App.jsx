@@ -10,6 +10,7 @@ import HubCrowdsourced from "./website/pages/TextRichPages/HubCrowdsourced";
 import StudiesFinancial from "./website/pages/TextRichPages/StudiesFinancial";
 import StudiesHealthcare from "./website/pages/TextRichPages/StudiesHealthcare";
 import ArticlePage from "./website/pages/Articles/ArticlePage";
+// import ArticleManager from "./website/components/CMS";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "hub-crowdsourced", element: <HubCrowdsourced /> },
       { path: "studies-financial", element: <StudiesFinancial /> },
       { path: "studies-healthcare", element: <StudiesHealthcare /> },
+      // { path: "article-manager", element: <ArticleManager /> },
       // {
       //   path: "products",
       //   element: <ProductsPage />,
