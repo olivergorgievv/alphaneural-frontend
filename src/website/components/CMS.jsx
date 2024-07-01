@@ -75,7 +75,7 @@ function ArticleManager() {
             setCurrentArticle({ ...currentArticle, title: e.target.value })
           }
           placeholder="Article Title"
-          className="border mb-3 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 ocus:border-blue-500"
+          className="border-[1.5px] mb-3 text-sm rounded-lg focus:border-primary block w-full p-2.5 bg-accent-dark border-primary/20 placeholder-gray-400 text-white focus:ring-primary"
         />
         <input
           type="text"
@@ -87,7 +87,7 @@ function ArticleManager() {
             })
           }
           placeholder="Article Description"
-          className="border mb-3 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 ocus:border-blue-500"
+          className="border-[1.5px] mb-3 text-sm rounded-lg focus:border-primary block w-full p-2.5 bg-accent-dark border-primary/20 placeholder-gray-400 text-white focus:ring-primary "
         />
         <ContentEditor
           content={currentArticle.content}
@@ -156,13 +156,13 @@ function ContentEditor({ content, onChange }) {
             value={section.title || ""}
             onChange={(e) => handleChange(index, "title", e.target.value)}
             placeholder="Section Title"
-            className="border mb-3 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 ocus:border-blue-500"
+            className="border-[1.5px] mb-3 text-sm rounded-lg focus:border-primary block w-full p-2.5 bg-accent-dark/20 border-primary/20 placeholder-gray-400 text-white focus:ring-primary"
           />
           <textarea
             value={section.paragraph || ""}
             onChange={(e) => handleChange(index, "paragraph", e.target.value)}
             placeholder="Section Paragraph"
-            className="border mb-3 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 ocus:border-blue-500"
+            className="border-[1.5px] mb-3 text-sm rounded-lg focus:border-primary block w-full p-2.5 bg-accent-dark/20 border-primary/20 placeholder-gray-400 text-white focus:ring-primary"
             rows="4"
           />
 
