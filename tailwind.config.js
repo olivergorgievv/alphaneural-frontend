@@ -1,4 +1,5 @@
 import flowbite from "flowbite-react/tailwind";
+import aspectRatio from "@tailwindcss/aspect-ratio";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -31,5 +32,5 @@ export default {
       },
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [aspectRatio, flowbite.plugin()],
 };

@@ -9,6 +9,7 @@ import HubDecentralized from "./website/pages/TextRichPages/HubDecentralized";
 import HubCrowdsourced from "./website/pages/TextRichPages/HubCrowdsourced";
 import StudiesFinancial from "./website/pages/TextRichPages/StudiesFinancial";
 import StudiesHealthcare from "./website/pages/TextRichPages/StudiesHealthcare";
+import ArticlePage from "./website/pages/Articles/ArticlePage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: "roadmap", element: <Roadmap /> },
       { path: "tokenomics", element: <Tokenomics /> },
       { path: "blog", element: <BlogSection /> },
+      { path: "blog/:id", element: <ArticlePage /> },
       { path: "hub-decentralized", element: <HubDecentralized /> },
       { path: "hub-crowdsourced", element: <HubCrowdsourced /> },
       { path: "studies-financial", element: <StudiesFinancial /> },
